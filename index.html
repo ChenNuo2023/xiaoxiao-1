@@ -60,8 +60,8 @@
 
         #target {
             position: absolute;
-            width: 48vmin;
-            height: 48vmin;
+            width: 55vmin;
+            height: 55vmin;
             border-radius: 50%;
             cursor: pointer;
             box-shadow: 0 15px 45px rgba(0,0,0,0.18), 0 0 30px rgba(253,224,71,0.3);
@@ -99,15 +99,12 @@
             left: 24px;
             right: 24px;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
             gap: 12px;
             z-index: 30;
             pointer-events: none;
-        }
-
-        .hud-row {
-            display: flex;
-            gap: 12px;
             flex-wrap: wrap;
         }
 
@@ -128,12 +125,6 @@
             display: flex;
             align-items: center;
             gap: 8px;
-        }
-
-        .stats-row {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
         }
 
         #level-badge {
@@ -177,7 +168,7 @@
 
         #click-progress {
             position: absolute;
-            bottom: 160px;
+            bottom: calc(env(safe-area-inset-bottom, 20px) + 120px);
             left: 50%;
             transform: translateX(-50%);
             display: flex;
@@ -467,25 +458,21 @@
 
     <div id="game-container">
         <div id="hud">
-            <div class="hud-row">
-                <div class="hud-item" id="score-board">
-                    <span>⭐</span>
-                    <span>得分:</span>
-                    <span id="score">0</span>
-                </div>
-                <div id="collection-panel">
-                    <span class="collection-item" id="item-1">🌟</span>
-                    <span class="collection-item" id="item-2">💎</span>
-                    <span class="collection-item" id="item-3">🎁</span>
-                    <span class="collection-item" id="item-4">🏆</span>
-                    <span class="collection-item" id="item-5">👑</span>
-                </div>
+            <div class="hud-item" id="score-board">
+                <span>⭐</span>
+                <span>得分:</span>
+                <span id="score">0</span>
             </div>
-            <div class="stats-row">
-                <div id="level-badge">第 1 关</div>
-                <div id="streak-badge">🔥 0</div>
-                <div id="combo-badge">0 连击!</div>
+            <div id="collection-panel">
+                <span class="collection-item" id="item-1">🌟</span>
+                <span class="collection-item" id="item-2">💎</span>
+                <span class="collection-item" id="item-3">🎁</span>
+                <span class="collection-item" id="item-4">🏆</span>
+                <span class="collection-item" id="item-5">👑</span>
             </div>
+            <div id="level-badge">第 1 关</div>
+            <div id="streak-badge">🔥 0</div>
+            <div id="combo-badge">0 连击!</div>
         </div>
         
         <div id="target">
@@ -799,7 +786,7 @@
         }
 
         function moveTarget() {
-            const margin = 40;
+            const margin = 15;
             const x = margin + Math.random() * (100 - margin * 2);
             const y = margin + Math.random() * (100 - margin * 2);
             const color = colors[Math.floor(Math.random() * colors.length)];
