@@ -804,6 +804,7 @@
 
         function triggerFireworks() {
             playSound('firework');
+            target.style.display = 'none';
             
             const centerX = window.innerWidth / 2;
             const centerY = window.innerHeight / 2;
@@ -832,7 +833,11 @@
             hintText.className = 'firework-hint';
             hintText.textContent = '🎆 烟花来啦! 🎆';
             document.body.appendChild(hintText);
-            setTimeout(() => hintText.remove(), 2500);
+            setTimeout(() => {
+                hintText.remove();
+                target.style.display = 'flex';
+                moveTarget();
+            }, 2500);
         }
 
         function triggerRain() {
@@ -1074,9 +1079,11 @@
             rewardIcon.innerHTML = iconPath;
             rewardEmojis.textContent = emojiStr;
             rewardOverlay.style.display = 'flex';
+            target.style.display = 'none';
             createParticles();
             setTimeout(() => {
                 rewardOverlay.style.display = 'none';
+                target.style.display = 'flex';
                 if (score > 0) moveTarget();
             }, 2200);
         }
