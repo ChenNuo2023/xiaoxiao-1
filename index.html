@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Elephant Vision - 儿童训练官</title>
+    
+    <!-- iOS 桌面图标 -->
+    <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAMAAAD97SShAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAXVBMVEUAAAD///9YWFjMzMwjIyOwsLB/f39ycnKAgIAkJCRpaWlYWFj09PQ8PDzq6upYWFjz8/NkZGSgoKBycnJISEhYWFh3d3dZWVmYmJhYWFhkZGT///9YWFjMzMwjIyM3Y8Z6AAAACXRSTlMAABCAsMDQ0PDwy79sYwAAAAlwSFlzAAAOwwAADsMBx2+oZAAABidJREFUeNrtm9mO6zgMRUPrXdr7vnX//28ntuOk7SReIKB0FvM8BIsCCpIid0mqlH66uLi4uLi4uLi4uLi4uLi4/Nf59XN6h34In7z49XO6+mP44OWvn8m1G8EHL7UbjPCD13YfIeIP8Z1vI0T8Id7pLkT8Id7pLkT8Id7pLkT8Id7pLkT8Id7pLkT8IV78yS8Q8Yd4S66BiD/EW0L0E/GHuHAn+on4Q9y1kP/xL96S667mGoi6G96X6y4r4h6X667lSgjxLde6TghfOonwI+6e667m+oi6G96X6y4r4h6X667lSgjxLde6TghfOonwI+5Wv/O6XghvOhLhR9ytvuj6IeIPlYj9v7iIrvp38fSXiPhDuK76yW+v58qf/AIhf/f0Fwr5T6+vLhPCh66/fofwZ66+uExIP3f0xdUFH/P68iLh8lxcJiRcnouLhMtzcZHwwUVxYRF++fBfWIRffv8XFuHPv/+PC+Hz7//9hYQ3F96F8ObSuxDebH7vQviw5p0L78Oady6EP/9758L7X8XvXAh///XOneCHM/AnCH5y/vYEvv0E9vEE/uQEfrgP7Bv7wj6wr+wj+8j+sY8I6T9E9hMh/YfKfiLk00BlPxFyLlDZT4TqfKJ7fCJ7fCJ7fB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfB6FfCBf9OfY9OfY9OfY9OfY9OfY9OfY9OfY9OfY9OfY9Oes9OesuOesuOesuOesuOesuOesuOesuOesuOeseOeMeOeMeOeMeOeMeOeMeOeMeOeMeOeMeOeMeOeMeOeMeOeMeOeMeOeMeOeMeOeMeOeMeOeMeOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf6WOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0f0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0f0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0f0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0f0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0f0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0f0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0f0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0SOf0vK8AAAAASUVORK5CYII=">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="大象视界">
+
+    <style>
+        :root {
+            --red: #FB7185;
+            --blue: #38BDF8;
+            --yellow: #FDE047;
+            --green: #4ADE80;
+            --purple: #C084FC;
+            --bg: #F8FAFC;
+            --slate-800: #1E293B;
+            --slate-300: #E2E8F0;
+            --orange: #FB923C;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: var(--bg);
+            font-family: 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+            user-select: none;
+            -webkit-user-select: none;
+            transition: background-color 1s ease;
+        }
+
+        #game-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #target {
+            position: absolute;
+            width: 48vmin;
+            height: 48vmin;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translate(-50%, -50%) scale(1);
+            animation: appear 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            touch-action: manipulation;
+            z-index: 20;
+        }
+
+        #target:active {
+            transform: translate(-50%, -50%) scale(0.85);
+        }
+
+        @keyframes appear {
+            0% { transform: translate(-50%, -50%) scale(0.2) rotate(-45deg); opacity: 0; }
+            100% { transform: translate(-50%, -50%) scale(1) rotate(0); opacity: 1; }
+        }
+
+        svg {
+            width: 70%;
+            height: 70%;
+            fill: white;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.12));
+        }
+
+        #hud {
+            position: absolute;
+            top: env(safe-area-inset-top, 24px);
+            left: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 30;
+            pointer-events: none;
+        }
+
+        .hud-item {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 24px;
+            border-radius: 24px;
+            border: 2px solid var(--slate-300);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+
+        #score-board {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--slate-800);
+        }
+
+        .stats-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        #level-badge {
+            background: var(--slate-800);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 999px;
+            font-weight: 800;
+            font-size: 18px;
+            border: 2px solid white;
+        }
+
+        #combo-badge {
+            background: var(--orange);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 999px;
+            font-weight: 900;
+            font-size: 18px;
+            font-style: italic;
+            border: 2px solid white;
+            display: none;
+            animation: combo-in 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes combo-in {
+            0% { transform: scale(0); }
+            70% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+
+        #reward-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(25px);
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        #reward-icon {
+            width: 200px;
+            height: 200px;
+            fill: var(--yellow);
+            filter: drop-shadow(0 0 35px rgba(250,204,21,0.6));
+        }
+
+        .reward-text {
+            font-size: 64px;
+            font-weight: 900;
+            color: var(--slate-800);
+            margin-top: 30px;
+            letter-spacing: -2px;
+            text-align: center;
+        }
+
+        .particle {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            pointer-events: none;
+            z-index: 110;
+        }
+
+        #hint {
+            position: absolute;
+            bottom: 60px;
+            width: 100%;
+            text-align: center;
+            color: #94A3B8;
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            animation: hint-bounce 1.5s infinite;
+        }
+
+        @keyframes hint-bounce {
+            0%, 100% { transform: translateY(0); opacity: 0.5; }
+            50% { transform: translateY(-20px); opacity: 1; }
+        }
+
+        #flash {
+            position: fixed;
+            inset: 0;
+            background: white;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 15;
+        }
+
+        @media (min-width: 768px) {
+            #score-board { font-size: 48px; }
+            .reward-text { font-size: 96px; }
+            #level-badge, #combo-badge { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="flash"></div>
+
+    <div id="game-container">
+        <div id="hud">
+            <div class="hud-item" id="score-board">得分: <span id="score">0</span></div>
+            <div class="stats-row">
+                <div id="level-badge">第 1 关</div>
+                <div id="combo-badge">0 连击!</div>
+            </div>
+        </div>
+        
+        <div id="target">
+            <svg viewBox="0 0 24 24" id="target-svg">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+        </div>
+
+        <div id="hint">点一点彩色的目标吧!</div>
+    </div>
+
+    <div id="reward-overlay">
+        <svg id="reward-icon" viewBox="0 0 24 24"></svg>
+        <div class="reward-text" id="reward-msg">升级啦!</div>
+    </div>
+
+    <script>
+        const target = document.getElementById('target');
+        const scoreVal = document.getElementById('score');
+        const levelBadge = document.getElementById('level-badge');
+        const comboBadge = document.getElementById('combo-badge');
+        const targetSvg = document.getElementById('target-svg');
+        const rewardOverlay = document.getElementById('reward-overlay');
+        const rewardIcon = document.getElementById('reward-icon');
+        const hint = document.getElementById('hint');
+        const flash = document.getElementById('flash');
+        
+        let score = 0;
+        let combo = 0;
+        let level = 1;
+        let comboTimer = null;
+        let audioCtx = null;
+
+        const colors = ['#FB7185', '#38BDF8', '#FBBF24', '#4ADE80', '#C084FC', '#F97316', '#06B6D4'];
+        
+        // --- 庞大的不重复图形库 (海量增加) ---
+        const ALL_SHAPES = [
+            // 基础形状
+            'M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z', // 星星
+            'M12,21.4L10.6,20.1C5.4,15.4 2,12.3 2,8.5C2,5.4 4.4,3 7.5,3C9.2,3 10.9,3.8 12,5.1C13.1,3.8 14.8,3 16.5,3C19.6,3 22,5.4 22,8.5C22,12.3 18.6,15.4 13.4,20.1L12,21.4Z', // 爱心
+            'M12,2L4.5,20.3L5.2,21L12,18L18.8,21L19.5,20.3L12,2Z', // 火箭/三角
+            'M21,16.5L12.6,21.8C12.4,21.9 12.2,22 12,22C11.8,22 11.6,21.9 11.4,21.8L3,16.5V7.5L11.4,2.2C11.6,2.1 11.8,2 12,2C12.2,2 12.4,2.1 12.6,2.2L21,7.5V16.5Z', // 钻石/六边形
+            
+            // 动物 & 自然
+            'M12,2C6.5,2 2,6.5 2,12C2,17.5 6.5,22 12,22C17.5,22 22,17.5 22,12C22,6.5 17.5,2 12,2M12,20C7.6,20 4,16.4 4,12C4,7.6 7.6,4 12,4C16.4,4 20,7.6 20,12C20,16.4 16.4,20 12,20M12,7L15,10H13V17H11V10H9L12,7Z', // 向上箭头圆
+            'M12,2L1,21H23L12,2M12,6L19.53,19H4.47L12,6M11,10V14H13V10H11M11,16V18H13V16H11Z', // 警告三角
+            'M11.5,2C10.1,2 9,3.1 9,4.5C9,5.9 10.1,7 11.5,7C12.9,7 14,5.9 14,4.5C14,3.1 12.9,2 11.5,2M11.5,8C8.6,8 6.1,10.1 5.2,12.8C5.1,13.3 5,13.7 5,14.2V22H18V14.2C18,11.3 15.1,8.9 11.5,8Z', // 大象
+            'M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M7,9.5C7,8.7 7.7,8 8.5,8C9.3,8 10,8.7 10,9.5C10,10.3 9.3,11 8.5,11C7.7,11 7,10.3 7,9.5M12,18C9.7,18 7.7,16.3 6.9,14H17.1C16.3,16.3 14.3,18 12,18M15.5,11C14.7,11 14,10.3 14,9.5C14,8.7 14.7,8 15.5,8C16.3,8 17,8.7 17,9.5C17,10.3 16.3,11 15.5,11Z', // 狮子/猫
+            'M12,18C15.31,18 18,15.31 18,12C18,8.69 15.31,6 12,6C8.69,6 6,8.69 6,12C6,15.31 8.69,18 12,18M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z', // 罗盘/箭头
+            'M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z', // 加号圆
+            
+            // 物品 & 生活
+            'M20,6H16V3C16,1.9 15.1,1 14,1H10C8.9,1 8,1.9 8,3V6H4C2.9,6 2.01,6.9 2.01,8L2,21C2,22.1 2.9,23 4,23H20C21.1,23 22,22.1 22,21V8C22,6.9 21.1,6 20,6M10,3H14V6H10V3M20,21H4V8H20V21Z', // 礼物
+            'M12,3L1,9L12,15L21,10.09V17H23V9L12,3M3.38,9L12,4.3L20.62,9L12,13.7L3.38,9Z', // 毕业帽
+            'M12,2C10,2 4,2 4,2V14C4,14 4,22 12,22C20,22 20,14 20,14V2C20,2 14,2 12,2M12,20C10,20 6,20 6,14V4H10V8L12,6L14,8V4H18V14C18,20 14,20 12,20Z', // 杯子/兔子
+            'M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5Z', // 六边形
+            'M12,2L15,9H22L16.5,13.5L18.5,21L12,16.5L5.5,21L7.5,13.5L2,9H9L12,2Z', // 胖星星
+            'M12,2C8.13,2 5,5.13 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9C19,5.13 15.87,2 12,2M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5Z', // 气球
+            'M19,3H5C3.9,3 3,3.9 3,5V19C3,20.1 3.9,21 5,21H19C20.1,21 21,20.1 21,19V5C21,3.9 20.1,3 19,3M19,19H5V5H19V19M12,6V18M6,12H18', // 十字窗
+            
+            // 更多组合图案
+            'M2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6Z', // 嵌套圆/靶
+            'M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2Z', // 甜甜圈
+            'M13,10h-2V8h2V10z M13,16h-2v-4h2V16z M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20z', // 镂空信息圆
+            'M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z', // 大加号
+            'M18.9,11C18.4,11 18,11.4 18,11.9V13H6V11.9C6,11.4 5.6,11 5.1,11C4.6,11 4.2,11.4 4.1,11.9C4,12.1 4,12.5 4,13V15C4,16.1 4.9,17 6,17H18C19.1,17 20,16.1 20,15V13C20,12.3 19.7,11.7 19.3,11.3C19.2,11.2 19,11 18.9,11Z', // 赛车
+            'M20,2H4C2.9,2 2,2.9 2,4V12C2,13.1 2.9,14 4,14H20C21.1,14 22,13.1 22,12V4C22,2.9 21.1,2 20,2M20,12H4V4H20V12Z', // 掌机/卡丁车
+            'M12,2L1,21H23L12,2M12,6L19.53,19H4.47L12,6M11,10V14H13V10H11M11,16V18H13V16H11Z', // 感叹三角
+            
+            // 抽象 & 几何
+            'M12,2L16,5L19,9L21,14L19,19L16,22L12,21L8,22L5,19L3,14L5,9L8,5L12,2Z', // 多边形
+            'M12,2L2,12L12,22L22,12L12,2M12,4.83L19.17,12L12,19.17L4.83,12L12,4.83Z', // 嵌套菱形
+            'M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10Z', // 目标
+            'M2,12H4V17H20V12H22V17C22,18.1 21.1,19 20,19H4C2.9,19 2,18.1 2,17V12M12,2L6.5,7.5L7.91,8.91L11,5.83V14H13V5.83L16.09,8.91L17.5,7.5L12,2Z', // 篮子
+            'M21,11C21,16.5 16.5,21 11,21C5.5,21 1,16.5 1,11C1,5.5 5.5,1 11,1C16.5,1 21,5.5 21,11M11,3C6.6,3 3,6.6 3,11C3,15.4 6.6,19 11,19C15.4,19 19,15.4 19,11C19,6.6 15.4,3 11,3M11,17C7.7,17 5,14.3 5,11C5,7.7 7.7,5 11,5C14.3,5 17,7.7 17,11C17,14.3 14.3,17 11,17Z', // 甜甜圈2
+        ];
+
+        // --- 核心逻辑: 图案不重复出现包 ---
+        // 确保所有图案出完一轮再开始下一轮，完美符合用户需求
+        let shapeBag = [];
+        function getNextShape() {
+            if (shapeBag.length === 0) {
+                // 当包里没有图案时，重新填满所有图案
+                shapeBag = [...ALL_SHAPES];
+                // Fisher-Yates 洗牌算法: 随机打乱包内顺序
+                for (let i = shapeBag.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [shapeBag[i], shapeBag[j]] = [shapeBag[j], shapeBag[i]];
+                }
+                console.log("图案包已重置，开始新的一轮不重复挑战！");
+            }
+            // 从包里拿出一个图案并返回，这样它就不会在本次循环中再次出现
+            return shapeBag.pop();
+        }
+
+        // 音频系统
+        function playSound(type) {
+            try {
+                if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                if (audioCtx.state === 'suspended') audioCtx.resume();
+                
+                const now = audioCtx.currentTime;
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain); gain.connect(audioCtx.destination);
+
+                if (type === 'level') {
+                    const freqs = [523.25, 659.25, 783.99, 1046.50];
+                    freqs.forEach((f, i) => {
+                        const o = audioCtx.createOscillator();
+                        const g = audioCtx.createGain();
+                        o.connect(g); g.connect(audioCtx.destination);
+                        o.type = 'triangle';
+                        o.frequency.setValueAtTime(f, now + i * 0.12);
+                        g.gain.setValueAtTime(0.2, now + i * 0.12);
+                        g.gain.exponentialRampToValueAtTime(0.001, now + i * 0.12 + 0.4);
+                        o.start(now + i * 0.12); o.stop(now + i * 0.12 + 0.4);
+                    });
+                } else if (type === 'pop') {
+                    osc.frequency.setValueAtTime(320, now);
+                    osc.frequency.exponentialRampToValueAtTime(80, now + 0.1);
+                    gain.gain.setValueAtTime(0.3, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.1);
+                    osc.start(); osc.stop(now + 0.1);
+                } else if (type === 'explode') {
+                    osc.type = 'square';
+                    osc.frequency.setValueAtTime(140, now);
+                    osc.frequency.exponentialRampToValueAtTime(30, now + 0.5);
+                    gain.gain.setValueAtTime(0.3, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.5);
+                    osc.start(); osc.stop(now + 0.5);
+                }
+            } catch(e) {}
+        }
+
+        function moveTarget() {
+            const margin = 30; // 增加边界距离防止被挡住
+            const x = margin + Math.random() * (100 - margin * 2);
+            const y = margin + Math.random() * (100 - margin * 2);
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            
+            target.style.left = x + '%';
+            target.style.top = y + '%';
+            target.style.backgroundColor = color;
+            targetSvg.querySelector('path').setAttribute('d', getNextShape());
+            
+            target.style.animation = 'none';
+            target.offsetHeight; 
+            target.style.animation = 'appear 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+        }
+
+        function createParticles() {
+            const pColors = [...colors, '#FFF'];
+            for (let i = 0; i < 30; i++) {
+                const p = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+                p.setAttribute('viewBox', '0 0 24 24');
+                p.classList.add('particle');
+                p.innerHTML = '<path d="M12 2L15 9H22L16.5,13.5L18.5,21L12,16.5L5.5,21L7.5,13.5L2,9H9L12,2Z"></path>';
+                p.style.fill = pColors[Math.floor(Math.random() * pColors.length)];
+                
+                const angle = Math.random() * Math.PI * 2;
+                const dist = 60 + Math.random() * 320;
+                const tx = Math.cos(angle) * dist;
+                const ty = Math.sin(angle) * dist;
+
+                document.body.appendChild(p);
+                p.style.left = '50%';
+                p.style.top = '50%';
+                
+                p.animate([
+                    { transform: 'translate(-50%, -50%) scale(0) rotate(0deg)', opacity: 1 },
+                    { transform: `translate(calc(-50% + ${tx}px), calc(-50% + ${ty}px)) scale(3) rotate(${360 + Math.random()*360}deg)`, opacity: 0 }
+                ], { duration: 1500, easing: 'ease-out' }).onfinish = () => p.remove();
+            }
+        }
+
+        target.addEventListener('click', (e) => {
+            score++;
+            combo++;
+            scoreVal.textContent = score;
+            hint.style.display = 'none';
+
+            comboBadge.style.display = combo > 1 ? 'block' : 'none';
+            comboBadge.textContent = combo + ' 连击!';
+            
+            if (comboTimer) clearTimeout(comboTimer);
+            comboTimer = setTimeout(() => {
+                combo = 0;
+                comboBadge.style.display = 'none';
+            }, 3000);
+
+            const newLevel = Math.floor(score / 10) + 1;
+            if (newLevel > level) {
+                level = newLevel;
+                levelBadge.textContent = '第 ' + level + ' 关';
+                document.body.style.backgroundColor = level % 2 === 0 ? '#F1F5F9' : '#F8FAFC';
+                playSound('level');
+                showReward('升级啦!', '<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>');
+            } else if (combo % 10 === 0) {
+                playSound('explode');
+                showReward('超强连击!', '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>');
+                triggerFlash();
+            } else {
+                playSound('pop');
+            }
+
+            if (rewardOverlay.style.display !== 'flex') {
+                moveTarget();
+            }
+        });
+
+        function triggerFlash() {
+            flash.animate([{ opacity: 0.3 }, { opacity: 0 }], { duration: 500 });
+        }
+
+        target.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            target.click();
+        });
+
+        function showReward(msg, iconPath) {
+            rewardMsg.textContent = msg;
+            rewardIcon.innerHTML = iconPath;
+            rewardOverlay.style.display = 'flex';
+            createParticles();
+            setTimeout(() => {
+                rewardOverlay.style.display = 'none';
+                if (score > 0) moveTarget();
+            }, 2000);
+        }
+
+        // 初始化
+        moveTarget();
+    </script>
+</body>
+</html>
